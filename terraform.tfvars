@@ -1,0 +1,12 @@
+prefix       = "Demo"
+rgname       = "AKSRG"
+rglocation   = "eastus"
+vnetname     = "AKSVnet"
+snetname     = "AKSSnet"
+vnetadd      = ["10.0.0.0/16"]
+snetadd      = ["10.0.2.0/24"]
+nodecount    = 3
+AKSName      = "actionsAKS"
+nodepoolname = "octopus"
+newpool1     = "pool1"
+subscription = "5e0ec067-7409-4ede-ae47-ed0926bad2ee"
