@@ -1,10 +1,10 @@
 resourcegroup = {
   rg01 = {
-    name      = "aksrg"
+    name      = "aksrg01"
     rglocation = "eastus"
   }
   rg02 = {
-    name       = "aksrg2"
+    name       = "aksrg02"
     rglocation = "westus"
   }
 }
