@@ -14,5 +14,5 @@ jobs:
   uses: NizamORG/Terraform-reusable/.github/workflows/terraform-apply.yml@main
   secrets: inherit
   with:
-   subscription-id: ${{vars.SUBSCRIPTION_ID}}
+   subscriptionId: ${{vars.SUBSCRIPTION_ID}}
    workingdirectory: ./Deployment
