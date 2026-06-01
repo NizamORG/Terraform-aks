@@ -12,7 +12,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: Terraform Apply Plan
-     uses: NizamORG/terraform-reusable/.github/workflows/terraform-apply.yml@main
+     uses: NizamORG/Terraform-reusable/.github/workflows/terraform-apply.yml@main
      secrets: inherit
      with:
       subscription-id: ${{vars.SUBSCRIPTION_ID}}
