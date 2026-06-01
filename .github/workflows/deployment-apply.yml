@@ -9,11 +9,9 @@ on:
 
 jobs:
  Deployment:
-  runs-on: ubuntu-latest
-  steps:
-   - name: Terraform Apply Plan
-     uses: NizamORG/Terraform-reusable/.github/workflows/terraform-apply.yml@main
-     secrets: inherit
-     with:
-      subscription-id: ${{vars.SUBSCRIPTION_ID}}
-      workingdirectory: ./Deployment
+  name: Terraform Apply Plan
+  uses: NizamORG/Terraform-reusable/.github/workflows/terraform-apply.yml@main
+  secrets: inherit
+  with:
+   subscription-id: ${{vars.SUBSCRIPTION_ID}}
+   workingdirectory: ./Deployment
