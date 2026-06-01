@@ -11,7 +11,7 @@ jobs:
  Deployment:
   runs-on: ubuntu-latest
   steps:
-   - name: Terraform Plan PR
+   - name: Terraform Apply Plan
      uses: NizamORG/terraform-reusable/.github/workflows/terraform-apply.yml@main
      secrets: inherit
      with:
