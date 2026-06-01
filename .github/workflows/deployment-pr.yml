@@ -7,15 +7,11 @@ on:
     - ".github/workflows/deployment-pr.yml"
     - "Deployment/**"
 
-permissions:
- id-token: write
- contents: read
-
 jobs:
  Deployment:
   runs-on: ubuntu-latest
   steps:
-   - name: PR deployment
+   - name: Terraform Plan PR
      uses: NizamORG/terraform-reusable/.github/workflows/terraform-pr.yml@main
      secrets: inherit
      with:

@@ -1,0 +1,19 @@
+name: Resource Deployment Apply
+
+on: 
+ push:
+  branches: [main]
+  paths:
+   - ".github/workflows/deployment-apply.yml"
+   - "Deployment/**"
+
+jobs:
+ Deployment:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Terraform Plan PR
+     uses: NizamORG/terraform-reusable/.github/workflows/terraform-apply.yml@main
+     secrets: inherit
+     with:
+      subscription-id: ${{vars.SUBSCRIPTION_ID}}
+      workingdirectory: ./Deployment
