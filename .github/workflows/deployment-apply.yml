@@ -2,7 +2,8 @@ name: Resource Deployment Apply
 
 on: 
  push:
-  branches: [main]
+  branches:
+   - main
   paths:
    - ".github/workflows/deployment-apply.yml"
    - "Deployment/**"
