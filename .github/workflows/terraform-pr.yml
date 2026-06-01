@@ -1,39 +1,41 @@
-name: Terraform deployment
-on:
- pull_request:
-   types: [opened, synchronize, reopened, edited]
-   paths:
-     - "Deployment/**"
+# name: Terraform deployment
+# on:
+#  pull_request:
+#    types: [opened, synchronize, reopened, edited]
+#    paths:
+#     - ".github/workflows/terraform-pr.yml"
+#     - "Deployment/**"
+#     - "aks-deployment/**"
 
-permissions:
- id-token: write
- contents: read
+# permissions:
+#  id-token: write
+#  contents: read
 
-env:
- TF_WORKING_DIR: ./Deployment
+# env:
+#  TF_WORKING_DIR: ./Deployment
 
-jobs:
- Deployment:
-  runs-on: ubuntu-latest
-  defaults:
-   run:
-    working-directory: ${{env.TF_WORKING_DIR}}
-  steps:
-   - name: Checkout Code
-     uses: actions/checkout@v6
+# jobs:
+#  Deployment:
+#   runs-on: ubuntu-latest
+#   defaults:
+#    run:
+#     working-directory: ${{env.TF_WORKING_DIR}}
+#   steps:
+#    - name: Checkout Code
+#      uses: actions/checkout@v6
      
-   - name: Azure Login
-     uses: azure/login@v2
-     with:
-      client-id: ${{vars.CLIENT_ID}}
-      tenant-id: ${{vars.TENANT_ID}}
-      subscription-id: ${{vars.SUBSCRIPTION_ID}}
+#    - name: Azure Login
+#      uses: azure/login@v2
+#      with:
+#       client-id: ${{vars.CLIENT_ID}}
+#       tenant-id: ${{vars.TENANT_ID}}
+#       subscription-id: ${{vars.SUBSCRIPTION_ID}}
 
-   - name: Setup Terraform
-     uses: hashicorp/setup-terraform@v3
+#    - name: Setup Terraform
+#      uses: hashicorp/setup-terraform@v3
 
-   - name: Terraform init
-     run: terraform init
+#    - name: Terraform init
+#      run: terraform init
 
-   - name: Terraform plan
-     run: terraform plan -out=tfplan
+#    - name: Terraform plan
+#      run: terraform plan -out=tfplan
