@@ -1,0 +1,56 @@
+---
+# Owner: Nick Chao
+gh_groups:
+  gh-aad-iam-owners:
+    privacy: closed
+    description: A github managed team for platform approvers
+    members:
+      - username: nick-chao_CPSI
+        role: maintainer
+aad_groups:
+  # Azure AD AAD role groups
+  aad-pim-cloud-app-admin:
+    users:
+      - blake.clark@trubridge.com
+      - chase.kleinschmidt@trubridge.com
+      - eric.singer@trubridge.com
+      - erik.ha@trubridge.com
+      - gousiya.sayyad@trubridge.com
+      - jason.phillips@trubridge.com
+      - jeremy.parrillo@trubridge.com
+      - nick.chao@trubridge.com
+      - thomas.burt@trubridge.com
+      - wynn.vanduyn@trubridge.com
+      - shrenik.punna@trubridge.com
+  aad-rbac-directory-readers:
+    spn_client_ids:
+      - 71f12994-3b33-48aa-b14d-b906bf2b23ce # spn-lz-us-cpsicorp-qa-001
+      - 28d70d77-66d7-419a-9e35-3cf199ee0b30 # spn-subs-lz-us-cpsicorp-dev-001-data-platform-security
+      - 1ad08628-276b-4cfa-afac-c162ad015788 # spn-subs-lz-us-cpsicorp-qa-001-data-platform-security
+      - bd92f47c-f4b0-4e64-b166-9d7c9972821f # spn-subs-sandbox-us-cpsicorp-shd-001-data-platform-security
+      - d40ddf67-de5d-4e37-9766-1cac639b47f9 # spn-subs-lz-us-cpsicorp-pd-001-mdp-terraform COP-2310
+      - 609a384d-d8fa-488b-8d4f-11af02dd80aa # spn-crp-mdp-pd-ingest-contributor COP-2939
+      - c87b1eee-a66e-4e1f-bc30-4c57f95c7eed # spn-crp-mdp-dev-ingest-contributor COP-2937
+      - aeac6f65-fb01-4ae4-acfc-3102290c0909 # spn-repo-cpsiscorp-github-core-repositories-reader COP-5635
+  aad-rbac-global-reader:
+  aad-rbac-groups-admin:
+    spn_client_ids:
+      - 01b24af4-c5ea-40b1-9d1c-b13784def997 # spn-repo-cpsiscorp-github-core-repositories COP-5635
+    users:
+      - nick.chao@trubridge.com
+  aad-rbac-privileged-role-administrator:
+    users:
+      - nick.chao@trubridge.com
+  aad-rbac-spn-aad-argo-cd-oidc-cloud-app-admin:
+    spn_client_ids:
+      - 81463605-925a-4bb0-938c-d2fb307645b6 # uai-b36a5d988f7bd420afa1d23e42defff1d05c981f600840e0ea8f94e1a061fc9d-wfid
+  aad-rbac-spn-crp-kubeops-aks-001-cloud-app-admin:
+    spn_client_ids:
+      - 9aa9f449-430c-4e9d-a12f-af282e294bed # uai-106ca78b92a0874e7d9149ba58cd159258fd7dd37b2ecae5c6deed1892067c40-wfid
+      - 837bafdb-311b-44aa-9616-dbeeb19cd952 # uai-d8082bae0dc0dfda5e68d52bbb705cd6f762b9467a6e5af52c0e566085cb9a37-wfid
+  aad-rbac-spn-prisma-wwfoj-cloud-app-admin:
+    spn_client_ids:
+      - 4ca7fd4b-b425-4b28-a6b0-ad94ec656c5e # uai-a742f61a2a77f252ea283aaef795d9ca0294e15eb307c73c7e187642001316c3-wfid
+  aad-rbac-spn-sbx-argocd-cloud-app-admin:
+    spn_client_ids:
+      - 99193804-2a52-4d9e-b335-f291a08c4acb # uai-b36a5d988f7bd420afa1d23e42defff1d05c981f600840e0ea8f94e1a061fc9d-wfid

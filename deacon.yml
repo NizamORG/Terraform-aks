@@ -1,0 +1,36 @@
+---
+# Owners : Mahesh Pillai, Sumod Krishnan
+gh_groups:
+  gh-deacon-iam-owners:
+    privacy: closed
+    description: A github managed team for deacon approvers
+    members:
+      - username: mahesh-pillai_CPSI
+        role: maintainer
+      - username: sumod-krishnan_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-deacon-all:
+    nested_groups:
+      - az-grp-crp-proddev-deacon-approvers
+      - az-grp-crp-proddev-deacon-dev
+      - az-grp-crp-proddev-deacon-qa
+    users:
+      - abdul.naufal@trubridge.com
+      - akhil.achuthan@trubridge.com
+      - akhil.babu@trubridge.com
+      - mahesh.pillai@trubridge.com
+      - sumod.krishnan@trubridge.com
+  az-grp-crp-proddev-deacon-approvers:
+    users:
+      - mahesh.pillai@trubridge.com
+      - sumod.krishnan@trubridge.com
+  az-grp-crp-proddev-deacon-dev:
+    users:
+      - abdul.naufal@trubridge.com
+      - akhil.achuthan@trubridge.com
+      - mahesh.pillai@trubridge.com
+      - sumod.krishnan@trubridge.com
+  az-grp-crp-proddev-deacon-qa:
+    users:
+      - akhil.babu@trubridge.com
