@@ -8,10 +8,10 @@ on:
     - "Deployment/**"
 
 jobs:
- Deployment:
-  name: Terraform Plan PR
-  uses: NizamORG/Terraform-reusable/.github/workflows/terraform-pr.yml@main
-  secrets: inherit
-  with:
-   subscriptionId: ${{vars.SUBSCRIPTION_ID}}
-   workingdirectory: ./Deployment
+  Deployment:
+    name: Terraform Plan PR
+    uses: NizamORG/Terraform-reusable/.github/workflows/terraform-pr.yml@main
+    secrets: inherit
+    with:
+     subscriptionId: ${{vars.SUBSCRIPTION_ID}}
+     workingdirectory: ./Deployment
