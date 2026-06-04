@@ -8,6 +8,10 @@ on:
     - ".github/workflows/deployment-pr.yml"
     - "Deployment/**"
 
+permissions:
+  id-token: write
+  contents: read
+      
 jobs:
   Deployment:
     name: Terraform Plan PR
