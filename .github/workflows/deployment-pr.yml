@@ -1,0 +1,22 @@
+name: Resource Deployment PR
+
+on: 
+ pull_request_target:
+   branches: [main]
+   types: [opened, synchronize, reopened, edited]
+   paths:
+    - ".github/workflows/deployment-pr.yml"
+    - "Deployment/**"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  Deployment:
+    name: Terraform Plan PR
+    uses: NizamORG/Terraform-reusable/.github/workflows/terraform-pr.yml@main
+    secrets: inherit
+    with:
+     subscriptionId: ${{vars.SUBSCRIPTION_ID}}
+     workingDirectory: ./Deployment
