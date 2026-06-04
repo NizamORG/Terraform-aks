@@ -15,4 +15,4 @@ jobs:
   secrets: inherit
   with:
    subscriptionId: ${{vars.SUBSCRIPTION_ID}}
-   workingdirectory: ./Deployment
+   workingDirectory: ./Deployment
