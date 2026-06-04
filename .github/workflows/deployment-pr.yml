@@ -1,8 +1,7 @@
 name: Resource Deployment PR
 
 on: 
- pull_request_target:
-   branches: [main]
+ pull_request:
    types: [opened, synchronize, reopened, edited]
    paths:
     - ".github/workflows/deployment-pr.yml"
