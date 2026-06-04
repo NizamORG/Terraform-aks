@@ -10,9 +10,9 @@ on:
 
 jobs:
  Deployment:
-  name: Terraform Apply Plan
-  uses: NizamORG/Terraform-reusable/.github/workflows/terraform-apply.yml@main
-  secrets: inherit
-  with:
-   subscriptionId: ${{vars.SUBSCRIPTION_ID}}
-   workingDirectory: ./Deployment
+   name: Terraform Apply Plan
+   uses: NizamORG/Terraform-reusable/.github/workflows/terraform-apply.yml@main
+   secrets: inherit
+   with:
+    subscriptionId: ${{vars.SUBSCRIPTION_ID}}
+    workingDirectory: ./Deployment
