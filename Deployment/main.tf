@@ -10,10 +10,10 @@ module "vnet" {
   rglocation       = module.resourcegroup.rg_location["rg01"]
 }
 
-# module "subnet" {
-#   for_each = var.vnet_definations
-#   source   = "../modules/subnet"
-#   subnet   = var.subnet
-#   vnetname = module.vnet.vnet_name[each.key]
-#   rgname   = module.vnet.vnet_rgname[each.key]
-# }
+module "subnet" {
+  for_each = var.vnet_definations
+  source   = "../modules/subnet"
+  subnet   = var.subnet
+  vnetname = module.vnet.vnet_name[each.key]
+  rgname   = module.vnet.vnet_rgname[each.key]
+}
