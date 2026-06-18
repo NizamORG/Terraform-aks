@@ -1,0 +1,20 @@
+{
+ "name": "Terraform-azure-development",
+
+ "build": {
+  "dockerfile": "Dockerfile",
+ },
+
+ "customizations": {
+  "vscode": {
+   "extensions": [
+    "harshicorp.terraform",
+    "ms-azuretools.vscode-docker"
+   ]
+  }
+ },
+ "runArgs": [
+    "--env-file",
+    ".devcontainer/devcontainer.env"
+  ]
+}

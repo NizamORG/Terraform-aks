@@ -13,10 +13,9 @@ permissions:
 
 jobs:
  Deployment:
-  runs-on: ubuntu-latest
-  defaults:
-   run:
-    working-directory: ./Deployment
-  steps:
-   - name: Checkout Code
-     uses: actions/checkout@v6
+  name: Terraform Plan PR
+  uses: NizamORG/Terraform-reusable/.github/workflows/terraform-pr.yml@main
+  secrets: inherit
+  with:
+   subscriptionId: ${{vars.SUBSCRIPTION_ID}}
+   workingDirectory: ./Deployment
